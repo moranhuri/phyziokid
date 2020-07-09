@@ -1,0 +1,129 @@
+﻿<!doctype html>
+<html lang="">
+<head>
+    <meta charset="utf-8" />
+    <title>תיק אישי</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <!-- CSS -->
+\    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/burgerNav.css" rel="stylesheet" />
+    <link href="styles/myStyle.css" rel="stylesheet" />
+
+
+    <!-- Scripts -->
+    <script src="jScripts/jquery-1.12.0.min.js"></script>
+
+
+    <script src="jScripts/JavaScript.js"></script>
+    <script src="jScripts/JavaScriptDB.js"></script>
+
+</head>
+<body>
+    <div id="container" class="container">
+        <!--אימייל של המשתמש דרך לוקל סטורז-->
+        <!--<div id="result"></div>-->
+
+        <header>
+            <h1 id="logo">
+                <img src="images/logo.png" />
+            </h1>
+            <div class="open">
+                <span class="cls"></span>
+
+                <span>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#about" title="about">קצת עלינו</a>
+
+                        </li>
+                        <li>
+                            <a href="profilSetting.html" title="skills">הגדרות פרופיל</a>
+                        </li>
+                        <li>
+
+                            <button id="logOutBtn" onclick="logOut()">התנתקות</button>
+                        </li>
+
+                    </ul>
+                </span>
+                <span class="cls"></span>
+            </div>
+            <button id="goBackPersonalBtn" onclick="goBackPersonalPage()" height="50">
+                <img src="images/backBTN.png" width="30" />
+            </button>
+
+            <div id="personalData" class="personalFile">
+                <h2 id="kidNameHeader"></h2>
+                <h2 id="kidAgeHeader"></h2>
+                <a href="personalFile.html">
+                    <img src="images/resume.png" width="30" />
+                </a>
+
+            </div>
+
+            <h3>תיק מעקב אישי</h3>
+            <nav id="personalFileNav">
+                <ul class="navbar navbar">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="step1.html">מעקב התקדמות</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="step2.html">לוח שנה</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+            <textarea class="focusInput" id="comment" type="text" placeholder="תיאור" onfocus="if (this.placeholder=='תיאור')this.placeholder='';" onblur="if(this.placeholder=='')this.placeholder='תיאור';"></textarea>
+            <input class="focusInput" id="postDate" type="date" placeholder="תאריך ביצוע" />
+
+            <buton id="addComment" type="button" onclick="addCommentBTN()">הוספה</buton>
+
+            <p id="feedback"></p>
+        </div>
+
+        <script>
+             document.getElementById("kidNameHeader").innerHTML = localStorage.getItem("kidNameValue");
+         var KidAge = localStorage.getItem("kidAgeValue");
+     
+         console.log(KidAge);
+            if (KidAge <= 1) {
+                document.getElementById("kidAgeHeader").innerHTML = ", חודש";
+            }
+            else {
+              document.getElementById("kidAgeHeader").innerHTML = ", " + KidAge + " חודשים";
+
+            }
+            //הופעת תאריך היום בדיפולט תיבת תאריך
+
+            function setInputDate(_id) {
+                var _dat = document.querySelector(_id);
+                var hoy = new Date(),
+                    d = hoy.getDate(),
+                    m = hoy.getMonth() + 1,
+                    y = hoy.getFullYear(),
+                    data;
+
+                if (d < 10) {
+                    d = "0" + d;
+                };
+                if (m < 10) {
+                    m = "0" + m;
+                };
+
+                data = y + "-" + m + "-" + d;
+                //console.log(data);
+                _dat.value = data;
+            };
+
+            setInputDate("#postDate");
+
+            postDate.max = new Date().toISOString().split("T")[0];
+        </script>
+</body>
+</html>

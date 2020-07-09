@@ -1,0 +1,90 @@
+﻿<!doctype html>
+<html lang="">
+<head>
+    <meta charset="utf-8" />
+    <title>הגדרות פרופיל</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <!-- CSS -->
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/myStyle.css" rel="stylesheet" />
+
+
+    <!-- Scripts -->
+    <script src="jScripts/jquery-1.12.0.min.js"></script>
+
+
+    <script src="jScripts/JavaScriptDB.js"></script>
+
+</head>
+<body>
+    <div id="container">
+        <span id="result" style="visibility:hidden; display:none"></span>
+        <div id="signInLogo">
+
+        </div>
+        <button id="goBackBtnSetting" onclick="goBack()" height="50">
+            <img src="images/backBTN.png" width="30" />
+        </button>
+        <h2 id="pageTitle">הגדרות פרופיל</h2>
+        <form id="settingForm">
+            <div id="userNameDiv"></div>
+            <input  class="focusInput" id="userName" type="text" placeholder="שם משתמש " onfocus="if (this.placeholder=='שם משתמש ')this.placeholder='';" onblur="if(this.placeholder=='')this.placeholder='שם משתמש ';" />
+          
+            <div id="kidNameDiv"></div>
+            <input  class="focusInput" id="kidName" type="text" placeholder="שם הילד" onfocus="if (this.placeholder=='שם הילד')this.placeholder='';" onblur="if(this.placeholder=='')this.placeholder='שם הילד';" />
+
+            <div id="KidBdayDiv"></div>
+            <input id="KidBday" type="date" placeholder="תאריך לידה" />
+
+            <div id="KidStepDiv"></div>
+            <select name="steps" id="KidStep">
+                <option value="" selected disabled hidden> שלב התפתחותי</option>
+                <option value="1">התהפכות</option>
+                <option value="2">זחילה</option>
+                <option value="3">ישיבה ותיישבות</option>
+                <option value="4">עמידה</option>
+                <option value="5">הליכה</option>
+            </select>
+
+            <div id="feedbackUpdate"></div>
+
+            <button id="updateProfil" type="button" onclick="update()">סיימתי</button>
+
+        </form>
+       
+    </div>
+    <script>
+
+       
+
+    document.getElementById("result").innerHTML = localStorage.getItem("textvalue");
+        console.log(localStorage.getItem("textvalue"));
+        
+     
+        function goBack() {
+            window.history.back(); 
+        }
+   
+
+        $(document).ready(function () {
+            $('#kidName').attr("placeholder", localStorage.getItem("kidNameValue"));
+            var currentStep = localStorage.getItem("stepValue") ;
+            $('#KidStep').val(currentStep);
+            
+            $('#userName').attr("placeholder", localStorage.getItem("userNameValue"));
+
+            var kidBirthday = JSON.parse(localStorage.getItem("kidBdayValue"));
+            console.log(kidBirthday);
+
+            var splitDate = kidBirthday.split('T')[0];
+            console.log(splitDate);
+
+            $('#KidBday').val(splitDate);
+        });
+    </script>
+</body>
+</html>

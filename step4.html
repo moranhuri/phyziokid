@@ -1,0 +1,289 @@
+﻿<!doctype html>
+<html lang="">
+<head>
+    <meta charset="utf-8" />
+    <title> עמידה</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <!--CSS-->
+    <!--<link href="bootstrap/css/bootstrap-reboot.css" rel="stylesheet" />
+    <link href="bootstrap/css/bootstrap-grid.css" rel="stylesheet" />
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/burgerNav.css" rel="stylesheet" />
+
+    <!-- Scripts -->
+    <script src="jScripts/jquery-1.12.0.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+    <script src="jquery.ba-hashchange.min.js"></script>
+    <link href="styles/myStyle.css" rel="stylesheet" />
+    <script src="jScripts/JavaScript.js"></script>
+    <script src="jScripts/JavaScriptDB.js"></script>
+    <script src="jScripts/JavaScriptDB.js"></script>
+    <!-- עם הלייק -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .fa {
+            font-size: 50px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+            .fa:hover {
+                color: darkblue;
+            }
+    </style>
+</head>
+<body>
+    <div id="container" class="container">
+
+        <header>
+            <h1 id="logo">
+                <img src="images/logo.png" />
+            </h1>
+            <div class="open">
+                <span class="cls"></span>
+
+                <span>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#about" title="about">קצת עלינו</a>
+
+                        </li>
+                        <li>
+                            <a href="profilSetting.html" title="skills">הגדרות פרופיל</a>
+                        </li>
+                        <li>
+
+                            <button id="logOutBtn" onclick="logOut()">התנתקות</button>
+                        </li>
+
+                    </ul>
+                </span>
+                <span class="cls"></span>
+            </div>
+
+            <div id="personalData">
+                <h2 id="kidNameHeader"></h2>
+                <h2 id="kidAgeHeader"></h2>
+                <a href="personalFile.html">
+                    <img src="images/resume.png" width="30" />
+                </a>
+
+            </div>
+
+
+            <nav id="stepsNav">
+                <ul class="navbar navbar">
+                    <li class="nav-item">
+                        <a class="nav-link" href="step1.html">
+                            <img src="images/stepsImages/baby_step1.png" width="50" />
+                            התהפכות
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="step2.html">
+                            <img src="images/stepsImages/baby_step2.png" width="50" />
+                            זחילה
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="step3.html">
+                            <img src="images/stepsImages/baby_step3.png" width="50" />
+                            ישיבה והתיישבות
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="step4.html">
+
+
+                            <img src="images/stepsActive/step4Active.png" width="60" />
+                            <span class="mainNavH3">עמידה</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="step5.html">
+
+                            <img src="images/stepsImages/baby_step5.png" width="50" />
+                            הליכה
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+
+        </header>
+
+        <div class="tab-content" id="pills-tabContent">
+            <!--סרטונים-->
+            <div class="tab-pane fade show active" id="pills-video" role="tabpanel" aria-labelledby="pills-video-tab">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <a href="step4Videos.html">
+                            <img src="images/videoFreezPhotos/הרמת חפץ.png" />
+                        </a>
+                    </div>
+                    <div class="col-xs-4">
+                        <a href="step4Videos.html#V2">
+                            <img src="images/videoFreezPhotos/הושטת יד ללא תמיכה.png" />
+                        </a>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-xs-4">
+                        <a href="step4Videos.html#V3">
+                            <img src="images/videoFreezPhotos/רוטציה בעמידה.png" />
+                        </a>
+                    </div>
+                    <div class="col-xs-4">
+                        <a href="step4Videos.html#V4">
+                            <img src="images/videoFreezPhotos/יציבות ושיווי משקל.png" />
+                        </a>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-xs-4">
+                        <a href="step4Videos.html#V5">
+                            <img src="images/videoFreezPhotos/ריקוד עם תמיכה.png" />
+                        </a>
+                    </div>
+                    <div class="col-xs-4">
+                        <a href="step4Videos.html#V6">
+                            <img src="images/videoFreezPhotos/הושבה עם תמיכה.png" />
+                        </a>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+            <!--טיפים-->
+            <div class="tab-pane fade" id="pills-tip" role="tabpanel" aria-labelledby="pills-video-tab">
+                <ul id="tips" style="height:650px">
+                    <li><img src="images/tips_white.png" /> <span>עמידה ללא תמיכת ידיים מהווה בסיס להליכה יציבה.</span></li>
+
+                    <li>
+                        <img src="images/tips_white.png" /> <span>
+                            מומלץ לתת לתינוק להתגלגל, לזחול ולשייט בכל הזדמנות שיש.
+                            כל אלו יעוררו את סקרנותו הטבעית ויעודדו אותו לעמוד.
+                        </span>
+                    </li>
+                    <li>
+                        <img src="images/tips_white.png" /> <span>
+                            משחק לצד תינוקות בגיל דומה יעודד את התינוק לחקות את בני גילו. זה גם יותר כיף!
+                        </span>
+                    </li>
+                    <li>
+                        <img src="images/tips_white.png" /> <span>
+                            מומלץ לאפשר לתינוק להיות יחף בתדירות גבוהה .
+                            תינוקות מסתמכים על 'הרגש' שינחה אותם,
+                            ולומדים להתאים את שיווי המשקל בהתאם לצורך.
+                        </span>
+                    </li>
+                    <li>
+                        <img src="images/tips_white.png" /> <span>
+                            כריעה היא מיומנות חשובה ותומכת ,
+                            התנועה למעלה ולמטה תבנה שרירים בירכיים.
+                        </span>
+                    </li>
+                </ul>
+
+            </div>
+            <!--מידע נוסף-->
+            <div class="tab-pane fade" id="pills-info" role="tabpanel" aria-labelledby="pills-info-tab">
+                <section>
+                    <p>
+                        <span>
+                            זמן רכישה נורנטיבי 8-9 חודשים - הילד מתחיל לעמוד
+                            והחל מגיל שנה מתחילה עמידה ללא תמיכה.
+                        </span>
+                    </p>
+                    <p><span>דרישה התפתחותית </span> שליטת ראש,גו ואגו והעברת משקל מצד לצד</p>
+                    <p>
+                        העמידה היא השלב האחרון בתהליך הזדקפותו של התינוק. מרכז הגוף שלו רחוק מהקרקע,
+                        כל מה שהתינוק תרגל עד כה, אמור לשרת אותו לייצוב ולתנועה בתנוחתו האנכית.
+                    </p>
+                    <img src="images/stepsImages/baby_AllStanding.png" />
+                </section>
+
+                <section style="background-color:#FFF5DD">
+                    <h3>המעבר לעמידה</h3>
+                    <ul>
+                        <li>ממצב של עמידת שש או ישיבה - הוא נאחז בדורם חיצוני,  מעמיד רגל אחת, דוחף ברגלו את הקרקע ונעמד.</li>
+                        <li>
+                            ממצב של ישיבה- הוא פונה הצידה, ותוך כדי השענות על ידיו,
+                            הוא מעמיד רגל אחת מעבר לרגל השנייה, מרים את ישבנו, מעמיד את רגלו השנייה, מיישר את רגליו, מרים את גופו ונעמד.
+                            תחילה הוא ייעמד כשהוא נתמך בנו, או ברהיט, ובהמשך הוא ייעמד ללא תמיכה.
+                        </li>
+                        <li>
+                            ממצב של עמידת שש- הוא לוקח את ישבנו לאחור, מנתק את ידיו מהרצפה,
+                            עובר לעמידה על שתי כפות רגליו בכריעה, ואז הוא דוחף את רגליו, מיישר אותן ונעמד.
+                        </li>
+                        <li>
+                            ממצב של עמידת שש - הוא שולח את ישבנו מעלה, כך שהוא נשען על כפות רגליו וכפות ידיו,
+                            לאחר שקרב ידיים אל הרגליים, הוא מרים את גופו לעמידה.
+                        </li>
+                    </ul>
+                    <img src="images/stepsImages/baby_standUpAction.png" />
+                </section>
+
+            </div>
+        </div>
+
+
+
+        <nav class="navbar fixed-bottom navbar-light bg-light">
+            <ul class="nav nav-pills mb-3 nav-justified w-100" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="pills-video-tab" data-toggle="pill" href="#pills-video" role="tab" aria-controls="pills-video" aria-selected="true">
+                        <img id="video_black" src="images/video_black.png" width="40" />
+                        <img id="video_white" src="images/videoActive.png" width="40" />
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-tip-tab" data-toggle="pill" href="#pills-tip" role="tab" aria-controls="pills-tip" aria-selected="false">
+                        <img id="tips_black" src="images/tips_black.png" width="40" />
+                        <img id="tips_white" src="images/tipActive.png" width="40" />
+
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " id="pills-info-tab" data-toggle="pill" href="#pills-info" role="tab" aria-controls="pills-info" aria-selected="false">
+                        <img id="info_black" src="images/info_black.png" width="40" />
+                        <img id="info_white" src="images/infoActive.png" width="40" />
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+    </div>
+    <script>
+        localStorage.getItem("textvalue");
+       document.getElementById("kidNameHeader").innerHTML = localStorage.getItem("kidNameValue");
+         var KidAge = localStorage.getItem("kidAgeValue");
+     
+         console.log(KidAge);
+            if (KidAge <= 1) {
+                document.getElementById("kidAgeHeader").innerHTML = ", חודש";
+            }
+            else {
+              document.getElementById("kidAgeHeader").innerHTML = ", " + KidAge + " חודשים";
+
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+﻿<!doctype html>
+<html lang="">
+<head>
+    <meta charset="utf-8" />
+    <title> התהפכות וגלגול</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/burgerNav.css" rel="stylesheet" />
+    <link href="styles/myStyle.css" rel="stylesheet" />
+    <!-- Scripts -->
+    <!--<script src="jScripts/jquery-1.12.0.min.js"></script>-->
+    <!--script src="bootstrap/js/bootstrap.js"></script>-->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+    <!--<script src="jquery.ba-hashchange.min.js"></script>-->
+
+    <script src="jScripts/JavaScript.js"></script>
+    <script src="jScripts/JavaScriptDB.js"></script>
+
+</head>
+<body>
+    <div id="container" class="container">
+
+        <header>
+            <h1 id="logo">
+                <img src="images/logo.png" />
+            </h1>
+            <div class="open">
+                <span class="cls"></span>
+
+                <span>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#about" title="about">קצת עלינו</a>
+
+                        </li>
+                        <li>
+                            <a href="profilSetting.html" title="skills">הגדרות פרופיל</a>
+                        </li>
+                        <li>
+                           
+                            <button id="logOutBtn" onclick="logOut()">התנתקות</button>
+                        </li>
+
+                    </ul>
+                </span>
+                <span class="cls"></span>
+            </div>
+
+            <div id="personalData">
+                <h2 id="kidNameHeader"></h2>
+                <h2 id="kidAgeHeader"></h2>
+                <a href="personalFile.html">
+                    <img src="images/resume.png" width="30" />
+                </a>
+
+            </div>
+            <nav id="stepsNav">
+                <ul class="navbar navbar">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="step1.html">
+                            <img src="images/stepsActive/step1Active.png" width="60"/>
+                            <span class="mainNavH3">התהפכות</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="step2.html">
+                            <img src="images/stepsImages/baby_step2.png" width="50"/>
+                            זחילה
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="step3.html">
+                            <img src="images/stepsImages/baby_step3.png" width="50" />
+                            ישיבה והתיישבות
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="step4.html">
+
+                            <img src="images/stepsImages/baby_step4.png" width="50" />
+                            עמידה
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="step5.html">
+
+                            <img src="images/stepsImages/baby_step5.png" width="50"/>
+                            הליכה
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <div class="tab-content" id="pills-tabContent">
+            <!--סרטונים-->
+            <div class="tab-pane fade show active" id="pills-video" role="tabpanel" aria-labelledby="pills-video-tab">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <a href="step1Videos.html">
+                            <img src="images/videoFreezPhotos/גירוי להתהפכות מלמעלה.png" />
+                        </a>
+                    </div>
+                    <div class="col-xs-4">
+                        <a href="step1Videos.html#V2">
+                            <img src="images/videoFreezPhotos/התהפכות בכיפוף הברך.png" />
+                        </a>
+                    </div>
+                   
+                </div>
+                <div class="row">
+                    <div class="col-xs-4">
+                        <a href="step1Videos.html#V3">
+                            <img src="images/videoFreezPhotos/פיתוח שרירי גב.png" />
+                        </a>
+                    </div>
+                    <div class="col-xs-4">
+                        <a href="step1Videos.html#V4">
+                            <img src="images/videoFreezPhotos/גירוי להתהפכות מהצד.png" />
+                        </a>
+                    </div>
+                   
+                </div>
+                <div class="row">
+                    <div class="col-xs-4">
+                        <a href="step1Videos.html#V5">
+                            <img src="images/videoFreezPhotos/היפוך ג'ודו.png" />
+                        </a>
+                    </div>
+                    <div class="col-xs-4">
+                        <a href="step1Videos.html#V6">
+                        <img src="images/videoFreezPhotos/התהפכות בעזרת הגבהה.png" />
+                        </a>
+                    </div>
+                 
+                </div>
+
+
+
+            </div>
+            <!--טיפים-->
+            <div class="tab-pane fade" id="pills-tip"  role="tabpanel" aria-labelledby="pills-tip-tab">
+               
+                <ul id="tips" style="height:600px">
+                    <li><img src="images/tips_white.png" /><span> חשוב לזכור, בפעמים הראשונות ההתהפכות יכולה להיות חוויה מפחידה.</span></li>
+                    <li><img src="images/tips_white.png" />	<span>כשהתינוק מצליח להתהפך, חשוב עוד יותר להשגיח עליו במיוחד אם הוא נמצא על משטח מוגבה.</span></li>
+                    <li><img src="images/tips_white.png" /><span>לאפשר לתינוק סביבה המעודדת תנועה וחקירה.</span></li>
+                    <li><img src="images/tips_white.png" /><span> .להלביש את התינוק בביגוד נוח ולא מסורבל</span></li>
+                    <li><img src="images/tips_white.png" /><span>.למצוא עבור התינוק משטח נוח שאינו רך מדי</span></li>
+                    <li><img src="images/tips_white.png" /> <span>ככל שהתינוק יתרגל לשהות על הבטן הוא יוכל לבלות כך זמן ממושך יותר.</span></li>
+
+                </ul>
+
+            </div>
+            <!--מידע נוסף-->
+            <div class="tab-pane fade" id="pills-info" role="tabpanel" aria-labelledby="pills-info-tab">
+                <section>
+                    <p><span>זמן רכישה נורמטיבי  4-6  חודשים</span></p>
+                    <p><span>דרישה התפתחותית </span>שליטה טובה בראש, בצוואר ושרירי זרועות מפותחים .</p>
+                    <p>לאחר שהתינוק ישלוט בראשו הוא ילמד להתהפך מצד לצד, מהבטן לגב ולהפך. עם הזמן, ולפני שילמד לזחול, ישתמש התינוק בהתהפכות כאמצעי לשוטט ברחבי הבית. 
+                    בקרב רוב התינוקות ההיפוך מתבצע מהבטן אל הגב ובהמשך מהגב לבטן,
+                    אבל סדר זה אינו בהכרח מחייב .
+                    בשכיבה על הבטן, ירים התינוק את ראשו ואת בית החזה, 
+                    ייתמך על זרועותיו כאילו הוא עומד לבצע שכיבת שמיכה. 
+                    פעולה זו מחזקת את שרירי זרועותיו לקראת ההתפכות.
+                    בפעמים הראשונות שיצליח להתהפך, 
+                    יש לשים לב שלא רק אתם עשויים להיות מופתעים, אלא גם הוא.
+                    </p>
+
+                    <img src="images/stepsImages/baby_AllRoll.png" />
+                </section>
+                <section style="background-color:#FFF5DD">
+                    <h3>שלבים בדרך להתהפכות- </h3>
+                    <ol>
+                        <li>הראש מסתובב מצד לצד ללא בעיה בשכיבה על הבטן או על הגב.</li>
+                        <li>הרגליים מתרוממות למעלה בשכיבה על הגב</li>
+                        <li>הגב מזדקף בשכיבה על הבטן הידיים דוחפות את המשטח. לשים לב שהמרפקים מתיישרים.</li>
+                        <li>התינוק מסובב את פלג גופו העליון לצדדים</li>
+                        <li>שרירים צידיים מתחזקים ומאפשרים העברות משקל של התינוק מצד לצד בשכיבה על הבטן.</li>
+                    </ol>
+
+                    <img src="images/stepsImages/baby_onTheSide.png" />
+                </section>
+
+            </div>
+        </div>
+
+
+
+        <nav class="navbar fixed-bottom navbar-light bg-light">
+            <ul class="nav nav-pills mb-3 nav-justified w-100" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="pills-video-tab" data-toggle="pill" href="#pills-video" role="tab" aria-controls="pills-video" aria-selected="true">
+                        <img id="video_black" src="images/video_black.png" width="40" />
+                        <img id="video_white" src="images/videoActive.png" width="40" />
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-tip-tab" data-toggle="pill" href="#pills-tip" role="tab" aria-controls="pills-tip" aria-selected="false">
+                        <img id="tips_black" src="images/tips_black.png" width="40" />
+                        <img id="tips_white" src="images/tipActive.png" width="40" />
+
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " id="pills-info-tab" data-toggle="pill" href="#pills-info" role="tab" aria-controls="pills-info" aria-selected="false">
+                        <img id="info_black" src="images/info_black.png" width="40" />
+                        <img id="info_white" src="images/infoActive.png" width="40" />
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+
+    </div>
+
+    <script>
+
+        localStorage.getItem("textvalue");
+          document.getElementById("kidNameHeader").innerHTML = localStorage.getItem("kidNameValue");
+         var KidAge = localStorage.getItem("kidAgeValue");
+     
+         console.log(KidAge);
+            if (KidAge <= 1) {
+                document.getElementById("kidAgeHeader").innerHTML = ", חודש";
+            }
+            else {
+              document.getElementById("kidAgeHeader").innerHTML = ", " + KidAge + " חודשים";
+
+            }
+    </script>
+</body>
+</html>

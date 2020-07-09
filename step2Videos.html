@@ -1,0 +1,86 @@
+﻿<!doctype html >
+<html lang="">
+<head>
+    <meta charset="utf-8" />
+    <title>זחילה</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="styles/reset.css" rel="stylesheet" />
+
+    <!-- Scripts -->
+    <!--<script src="jScripts/jquery-1.12.0.min.js"></script>-->
+    <!--<script src="bootstrap/js/bootstrap.js"></script>-->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+    <!--<script src="jquery.ba-hashchange.min.js"></script>-->
+    <link href="styles/myStyle.css" rel="stylesheet" />
+
+    <script src="jScripts/JavaScript.js"></script>
+    <script src="jScripts/JavaScriptDB.js"></script>
+</head>
+<body>
+    <div id="container" class="container">
+        <header id="onlyTop">
+          
+            <button id="goBackBtn" onclick="goBack()" height="50">
+                <img src="images/backBTN.png" width="30" />
+            </button>
+
+        </header>
+
+
+            <!--סרטונים-->
+        <div id="pills-videosOnly">
+            <a name="V1"><h3>טיפוס מעל הרגל</h3></a>
+            <iframe width="320" height="350" src="https://www.youtube.com/embed/-N_RlQVaeG4?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <a name="V2"><h3>תרגיל PIVOT</h3></a>
+            <iframe width="320" height="350" src="https://www.youtube.com/embed/TLVO84ux290?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <a name="V3"><h3>עידוד הליכת שש</h3></a>
+            <iframe width="320" height="350" src="https://www.youtube.com/embed/iybgTkTC9hw?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <a name="V4"><h3>מריצה</h3></a>
+            <iframe width="320" height="350" src="https://www.youtube.com/embed/c_SlIcYQkzM?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <a name="V5"> <h3>העברת משקל על גליל</h3></a>
+            <iframe width="320" height="350" src="https://www.youtube.com/embed/Nn_O-PbvyTM?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <a name="V6"><h3>זחילת גחון</h3></a>
+            <iframe width="320" height="350" src="https://www.youtube.com/embed/kVtRUfBUNOU?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+ 
+
+    </div>
+
+
+    <script>
+        window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("onlyTop");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+        }
+
+        (function() {
+    if (document.location.hash) {
+        setTimeout(function() {
+            window.scrollTo(window.scrollX, window.scrollY - 100);
+        }, 10);
+    }
+})();
+    </script>
+
+</body>
+
+</html>

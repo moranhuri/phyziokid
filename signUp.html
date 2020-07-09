@@ -1,0 +1,91 @@
+﻿<!doctype html>
+<html lang="">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <!-- CSS -->
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/myStyle.css" rel="stylesheet" />
+
+
+    <!-- Scripts -->
+    <script src="jScripts/jquery-1.12.0.min.js"></script>
+
+   
+    <script src="jScripts/JavaScriptDB.js"></script>
+
+</head>
+<body>
+    <div id="container">
+        <header id="signUpHeader">
+            <h1 id="logo">
+
+                <img src="images/phyzioKid_Logo.png" />
+            </h1>
+        </header>
+        <div id="signUpForm">
+            <div id="signUpOne">
+                <p>
+                    שלום וברוכים הבאים לפיזיו קיד,
+                    אנחנו כאן כדי לעבור ביחד את התהליך
+                    ההתפתחותי של הילד שלך ולהקל על הדרך.
+                </p>
+                <input class="focusInput" name="email" id="emailUser" type="text" placeholder="אימייל" onfocus="if (this.placeholder=='אימייל')this.placeholder='';" onblur="if(this.placeholder=='')this.placeholder='אימייל';" />
+                <input class="focusInput" id="passwordUser" type="number" placeholder="סיסמה" onfocus="if (this.placeholder=='סיסמה')this.placeholder='';" onblur="if(this.placeholder=='')this.placeholder='סיסמה';" />
+          
+            </div>
+
+            <div id="signUpTwo">
+                <p><span>עכשיו נכיר טוב יותר</span></p>
+
+                <input class="focusInput" id="userName" type="text" placeholder="שם משתמש" onfocus="if (this.placeholder=='שם משתמש')this.placeholder='';" onblur="if(this.placeholder=='')this.placeholder='שם משתמש';" />
+                <input class="focusInput" id="kidName" type="text" placeholder="שם הילד" onfocus="if (this.placeholder=='שם הילד')this.placeholder='';" onblur="if(this.placeholder=='')this.placeholder='שם הילד';" />
+                <input class="focusInput" id="KidBday" type="date" placeholder="תאריך לידה"/>
+                <!--<input id="KidStep" type="text" value="שלב התפתחותי" />-->
+                <select name="steps" id="KidStep" value="שלב">
+                    <option value="" selected disabled hidden> שלב התפתחותי</option>
+                    <option value="1">התהפכות</option>
+                    <option value="2">זחילה</option>
+                    <option value="3">ישיבה ותיישבות</option>
+                    <option value="4">עמידה</option>
+                    <option value="5">הליכה</option>
+                </select>
+                <div class="openToolTipPartner">
+                    הוספת שותפים לדרך
+                    <img src="images/tooltipQues.png" width="15" />
+                </div>
+                <span class="partnerTooltip hide">משתמשים נוספים שיוכלו לצפות ולערוך את התוכן שלך</span>
+                <input class="focusInput" id="partnerEmail" type="text" placeholder="שותף לדרך" style="margin-top:10px;" onfocus="if (this.placeholder=='שותף לדרך')this.placeholder='';" onblur="if (this.placeholder == '') this.placeholder = 'שותף לדרך';" />
+                <p id="feedback2"></p>
+  
+                <button id="doneSignUp" type="button" onclick="signUp()">סיימתי</button>
+
+                
+
+            </div>
+            </div>
+        </div>
+    
+
+    <script>
+        $(".openToolTipPartner").click(function () {
+            $(".partnerTooltip").toggleClass( "hide", "show" );
+
+        })
+
+        KidBday.max = new Date().toISOString().split("T")[0];
+       
+     
+
+//$(".partnerTooltip").click(function() {
+//  $( ".partnerTooltip" ).removeClass( "show" );   $( ".partnerTooltip" ).addClass( "hide" );
+
+//})
+    </script>
+</body>
+</html>

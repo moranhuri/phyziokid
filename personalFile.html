@@ -1,0 +1,225 @@
+﻿<!doctype html>
+<html lang="">
+<head>
+    <meta charset="utf-8" />
+    <title>תיק אישי</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/burgerNav.css" rel="stylesheet" />
+    <link href="styles/myStyle.css" rel="stylesheet" />
+
+    <!-- Scripts -->
+    <script src="jScripts/jquery-1.12.0.min.js"></script>
+
+
+    <script src="jScripts/JavaScript.js"></script>
+    <script src="jScripts/JavaScriptDB.js"></script>
+
+</head>
+<body>
+    <div id="container" class="container">
+        <!--אימייל של המשתמש דרך לוקל סטורז-->
+        <!--<div id="result"></div>-->
+
+        <header>
+            <h1 id="logo">
+                <img src="images/logo.png" />
+            </h1>
+            <div class="open">
+                <span class="cls"></span>
+
+                <span>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#about" title="about">קצת עלינו</a>
+
+                        </li>
+                        <li>
+                            <a href="profilSetting.html" title="skills">הגדרות פרופיל</a>
+                        </li>
+                        <li>
+
+                            <button id="logOutBtn" onclick="logOut()">התנתקות</button>
+                        </li>
+
+                    </ul>
+                </span>
+                <span class="cls"></span>
+            </div>
+
+            <button id="goBackPersonalBtn" onclick="goBackPersonal()" height="50">
+                <img src="images/backBTN.png" width="30" />
+            </button>
+
+            <div id="personalData" class="personalFile">
+                <h2 id="kidNameHeader"></h2>
+                <h2 id="kidAgeHeader"></h2>
+                <a href="personalFile.html">
+                    <img src="images/resume.png" width="30" />
+                </a>
+
+            </div>
+
+            <h3>תיק מעקב אישי</h3>
+            <nav id="personalFileNav">
+                <ul class="navbar navbar" style="padding-right: 0px;">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="personalFile.html">מעקב התקדמות</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">לוח שנה</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="post"></div>
+
+       
+
+        <buton id="plusButton" type="button" onclick="plusCommentBTN()">
+            <img src="images/plusButton.png" width="25"/>
+        </buton>
+
+    </div>
+
+        <script>
+
+            document.getElementById("kidNameHeader").innerHTML = localStorage.getItem("kidNameValue");
+         var KidAge = localStorage.getItem("kidAgeValue");
+     
+         console.log(KidAge);
+            if (KidAge <= 1) {
+                document.getElementById("kidAgeHeader").innerHTML = ", חודש";
+            }
+            else {
+              document.getElementById("kidAgeHeader").innerHTML = ", " + KidAge + " חודשים";
+
+            }
+
+
+            var comment = $("#comment").val();
+            var postDate = $("#postDate").val();
+            var emailUser = localStorage.getItem("textvalue");
+            console.log(emailUser)
+            //call to handler
+            $.get("personalFile.ashx", {
+                comment: comment,
+                postDate: postDate,
+                emailUser: emailUser,
+                
+
+            },
+
+
+                function (data, status) {
+                    console.log("הכפתור נלחץ");
+                    if (status == "success") {
+
+                        //printing  the response in the console
+                        console.log(data);
+
+
+                        if (data != "") {
+
+                            var obj = JSON.parse(data);
+
+                              console.log(obj[0]);
+
+                            var postRows = obj.Table.length;
+
+                            var new_arr = obj.Table.reverse();
+
+                            console.log(new_arr);
+
+                            var post = document.getElementById("post");
+
+                            // creates a <table> element and a <tbody> element
+                            var tbl = document.createElement("table");
+                            tbl.id= "fileTable";
+                               var tblBody = document.createElement("tbody");
+
+                                // creating all cells
+                                for (var i = 0; i < postRows; i++) {
+                             // creates a table row
+                                    var row = document.createElement("tr");
+                                     var userName = new_arr[i]["userName"];
+                                    var comment = new_arr[i]["comment"];
+                                   
+                                    var date = new Date(new_arr[i]["dateTime"]);
+                                    
+                                    //var splitDate = date.split('T')[0];
+                                    var convertDate = ((date.getDate() > 9) ? date.getDate() : ('0' + date.getDate())) +
+                                        '/' + ((date.getMonth() > 8) ? (date.getMonth() + 1) : ('0' + (date.getMonth() + 1))) +
+                                        '/' + date.getFullYear();
+
+
+                                        //var date = new Date('2010-10-11T00:00:00+05:30');
+
+                                    console.log(date);
+
+
+                                    for (var j = 0; j < 1; j++) {
+                                      
+                                 // Create a <td> element and a text node, make the text
+                                  // node the contents of the <td>, and put the <td> at
+                                   // the end of the table row
+                                        var cell = document.createElement("td");
+                                         cell.id= "userNameCell";
+                                        var cell2 = document.createElement("td");
+                                        cell2.id = "postCell";
+              
+                                        var breakLine = "\r\n";
+                                        var RightCellText = document.createTextNode(convertDate + breakLine + userName);
+                                        var LeftCellText = document.createTextNode(comment);
+                                        
+                                        cell.appendChild(RightCellText);
+                                        cell2.appendChild(LeftCellText);
+                                        row.appendChild(cell);
+                                        row.appendChild(cell2);
+                                      }
+
+                                  // add the row to the end of the table body
+                                      tblBody.appendChild(row);
+                                         }
+
+                            // put the <tbody> in the <table>
+                                tbl.appendChild(tblBody);
+                                // appends <table> into <body>
+                                 post.appendChild(tbl);
+                             // sets the border attribute of tbl to 2;
+                                tbl.setAttribute("border", "2");
+                            
+                            //for (var i = 0; i <postRows; i++) {
+
+                               
+
+
+                            //        //document.getElementById("post").innerHTML += obj.Table[i]["userName"] + "<br>" + obj.Table[i]["comment"] + "<br>";
+
+
+                                
+                            //}
+  
+
+                        }
+                        else {
+
+                            //$("#post").html("חסר תיאור להתקדמות החדשה");
+
+                        }
+                    }
+                });
+
+
+ 
+
+        </script>
+</body>
+</html>

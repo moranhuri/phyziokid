@@ -1,0 +1,45 @@
+﻿<!doctype html>
+<html lang="">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <!-- CSS -->
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/myStyle.css" rel="stylesheet" />
+
+
+    <!-- Scripts -->
+    <script src="jScripts/jquery-1.12.0.min.js"></script>
+
+    <script src="jScripts/JavaScriptDB.js"></script>
+
+</head>
+<body>
+    <div id="container">
+        <div id="signInLogo">
+
+        </div>
+
+        <form id="signInForm" action="profilSetting" method="post">
+            <input class="focusInput" id="emailUser" type="text" placeholder="אימייל" onfocus="if (this.placeholder=='אימייל')this.placeholder='';" onblur="if(this.placeholder=='')this.placeholder='אימייל';" />
+            <input class="focusInput" id="passwordUser" type="number" inputmode="decimal"  placeholder="סיסמה" onfocus="if (this.placeholder=='סיסמה')this.placeholder='';" onblur="if(this.placeholder=='')this.placeholder='סיסמה';" />
+
+            <p id="feedback"></p>
+            <button id="signIn" type="button" onclick="signInBTN()">כניסה</button>
+            <button id="passwordForgot" type="button" onclick="passwordForgotBTN()">שכחתי סיסמה</button> <br />
+
+            <button id="didntSignUp" type="button" onclick="goToSignUpBTN()">לא נרשמתי</button>
+
+ 
+        </form>
+
+  
+    </div>
+
+</body>
+</html>

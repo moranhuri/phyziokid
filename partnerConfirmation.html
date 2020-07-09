@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html lang="">
+<head>
+    <meta charset="utf-8" />
+    <title>שינוי פרטי שותף</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <!-- CSS -->
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/myStyle.css" rel="stylesheet" />
+
+
+    <!-- Scripts -->
+    <script src="jScripts/jquery-1.12.0.min.js"></script>
+
+  
+    <script src="jScripts/JavaScriptDB.js"></script>
+
+</head>
+<body>
+    <div id="container">
+        <!--<span id="result"></span>-->
+        <div id="signInLogo">
+
+        </div>
+
+        <h1 id="pageTitle">השלמת פרטים</h1>
+        <form id="signInForm">
+            <input class="focusInput" id="emailUser" type="text" placeholder="אימייל" onfocus="if (this.placeholder=='אימייל')this.placeholder='';" onblur="if(this.placeholder=='')this.placeholder='אימייל';" />
+            <input class="focusInput" id="userName" type="text" placeholder="שם משתמש" onfocus="if (this.placeholder=='שם משתמש חדש')this.placeholder='';" onblur="if(this.placeholder=='')this.placeholder='שם משתמש חדש';" />
+            <input class="focusInput" id="passwordUser" type="number" placeholder="סיסמה זמנית" onfocus="if (this.placeholder=='סיסמה זמנית')this.placeholder='';" onblur="if(this.placeholder=='')this.placeholder='סיסמה זמנית';" />
+            <input class="focusInput" id="newPassword" type="number" placeholder="סיסמה חדשה" onfocus="if (this.placeholder=='סיסמה חדשה')this.placeholder='';" onblur="if(this.placeholder=='')this.placeholder='סיסמה חדשה';" />
+
+
+            <button id="signIn" type="button" onclick="savePartnerConf()">שמור</button>
+        </form>
+    </div>
+    <script>
+
+
+    </script>
+</body>
+</html>

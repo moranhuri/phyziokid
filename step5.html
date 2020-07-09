@@ -1,0 +1,262 @@
+﻿<!doctype html>
+<html lang="">
+<head>
+    <meta charset="utf-8" />
+    <title>הליכה</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <!--CSS-->
+    <!--<link href="bootstrap/css/bootstrap-reboot.css" rel="stylesheet" />
+    <link href="bootstrap/css/bootstrap-grid.css" rel="stylesheet" />
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/burgerNav.css" rel="stylesheet" />
+
+    <!-- Scripts -->
+    <script src="jScripts/jquery-1.12.0.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+    <script src="jquery.ba-hashchange.min.js"></script>
+    <link href="styles/myStyle.css" rel="stylesheet" />
+    <script src="jScripts/JavaScript.js"></script>
+    <script src="jScripts/JavaScriptDB.js"></script>
+    <!-- עם הלייק -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .fa {
+            font-size: 50px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+            .fa:hover {
+                color: darkblue;
+            }
+    </style>
+</head>
+<body>
+    <div id="container" class="container">
+
+        <header>
+            <h1 id="logo">
+                <img src="images/logo.png" />
+            </h1>
+            <div class="open">
+                <span class="cls"></span>
+
+                <span>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#about" title="about">קצת עלינו</a>
+
+                        </li>
+                        <li>
+                            <a href="profilSetting.html" title="skills">הגדרות פרופיל</a>
+                        </li>
+                        <li>
+
+                            <button id="logOutBtn" onclick="logOut()">התנתקות</button>
+                        </li>
+
+                    </ul>
+                </span>
+                <span class="cls"></span>
+            </div>
+
+            <div id="personalData">
+                <h2 id="kidNameHeader"></h2>
+                <h2 id="kidAgeHeader"></h2>
+                <a href="personalFile.html">
+                    <img src="images/resume.png" width="30" />
+                </a>
+
+            </div>
+
+            <nav id="stepsNav">
+                <ul class="navbar navbar">
+                    <li class="nav-item">
+                        <a class="nav-link" href="step1.html">
+                            <img src="images/stepsImages/baby_step1.png" width="50"/>
+                           התהפכות
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="step2.html">
+                            <img src="images/stepsImages/baby_step2.png" width="50" />
+                            זחילה
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="step3.html">
+                            <img src="images/stepsImages/baby_step3.png" width="50" />
+                            ישיבה והתיישבות
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="step4.html">
+
+                            <img src="images/stepsImages/baby_step4.png" width="50" />
+                            עמידה
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="step5.html">
+                            <img src="images/stepsActive/step5Active.png" width="60" />
+                            <span class="mainNavH3">הליכה</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+
+        </header>
+
+        <div class="tab-content" id="pills-tabContent">
+            <!--סרטונים-->
+            <div class="tab-pane fade show active" id="pills-video" role="tabpanel" aria-labelledby="pills-video-tab">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <a href="step5Videos.html">
+                            <img src="images/videoFreezPhotos/עבודה על שיווי משקל.png" />
+                        </a>
+                    </div>
+                    <div class="col-xs-4">
+                        <a href="step5Videos.html#V2">
+                            <img src="images/videoFreezPhotos/שיפור תנועתיות כף הרגל.png" />
+                        </a>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-xs-4">
+                        <a href="step5Videos.html#V3">
+                            <img src="images/videoFreezPhotos/מסלול הליכה עם תמיכה.png" />
+                        </a>
+                    </div>
+                    <div class="col-xs-4">
+                        <a href="step5Videos.html#V4">
+                            <img src="images/videoFreezPhotos/הליכון.png" />
+                        </a>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-xs-4">
+                        <a href="step5Videos.html#V5">
+                            <img src="images/videoFreezPhotos/כפיפת ברכיים.png" />
+                        </a>
+                    </div>
+                    <div class="col-xs-4">
+                        <a href="step5Videos.html#V6">
+                            <img src="images/videoFreezPhotos/הליכה על כפות הרגליים.png" />
+                        </a>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+            <!--טיפים-->
+            <div class="tab-pane fade" id="pills-tip" role="tabpanel" aria-labelledby="pills-video-tab">
+                <ul id="tips">
+                    <li><img src="images/tips_white.png" /><span>חשוב לעודד הליכה הצידה בעזרת רהיטים.</span> </li>
+                    <li><img src="images/tips_white.png" /><span>חשוב לאפשר לתינוק להתנסות בעמידה על מצע רך ולא יציב. מה שיעודד אותו להעביר משקל ולאזן את גופו.</span> </li>
+                    <li><img src="images/tips_white.png" /><span>מומלץ לעודד את התינוק לבצע תרגיל בו הוא עושה את כל השלבים משכיבה על הבטן דרך התהפכות, ישיבה ועמידה ברצף.</span> </li>
+
+
+                </ul>
+
+            </div>
+            <!--מידע נוסף-->
+            <div class="tab-pane fade" id="pills-info" role="tabpanel" aria-labelledby="pills-info-tab">
+                <section>
+                    <p><span>זמן רכישה נורמטיבי 10-14 חודשים</span></p>
+                    <p>
+                        <span>דרישה התפתחותית </span>
+                        שליטת ראש, גו ויכולת העברת משקל מצד לצד.
+                    </p>
+
+
+                    <img src="images/stepsImages/baby_AllWalking.png" />
+                </section>
+                <section style="background-color:#FFF5DD">
+                    <h3>רכישת ההליכה</h3>
+
+                    <p>רכישת ההליכה תלויה במרכיבים המשפיעים על איכותה ויעילותה: טונוס (כיווץ של שרירי הגוף) תקין עד גבוה (לא גבוה מידי) מספיק כדי לאפשר תנועה. התנסות במגוון תנועות מהווה בסיס להתפתחות. . </p>
+
+                    <img src="images/stepsImages/baby_step4.png" />
+                </section>
+                <section>
+                    <h3>בסיס להליכה</h3>
+                    <p>
+                        הליכה ראשונית נעשית בד"כ בפיסוק רחב,
+                        רגליים מסובבות החוצה, ידיים מורמות, מאוגרפות וכתפיים נוקשות
+                    </p>
+                    <p>טיפוס- דרך לפתרון בעיות בדרך לחפץ. טיפוס דורש תכנון תנועה, התמודדות עם משטחים שונים ושיפוע. </p>
+                    <p>יש צורך לערער את היציבות החיצונית, לדוגמה הרעדת כיסא כדי לחזק את היציבות הפנימית (השרירים).</p>
+
+                    <img src="images/stepsImages/baby_walking.png" />
+                </section>
+                <section style="background-color:#FFF5DD">
+                    <h3>השגת ההליכה</h3>
+                    <p>הידיים והכתפיים לא מתרוממות כמו שקורה בהליכה לא בשלה. הראש לא מקובע וכך גוברת השליטה במפרקים. </p>
+
+                    <img src="images/stepsImages/baby_step5.png" />
+                </section>
+            </div>
+        </div>
+
+
+
+        <nav class="navbar fixed-bottom navbar-light bg-light">
+            <ul class="nav nav-pills mb-3 nav-justified w-100" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="pills-video-tab" data-toggle="pill" href="#pills-video" role="tab" aria-controls="pills-video" aria-selected="true">
+                        <img id="video_black" src="images/video_black.png" width="40" />
+                        <img id="video_white" src="images/videoActive.png" width="40" />
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-tip-tab" data-toggle="pill" href="#pills-tip" role="tab" aria-controls="pills-tip" aria-selected="false">
+                        <img id="tips_black" src="images/tips_black.png" width="40" />
+                        <img id="tips_white" src="images/tipActive.png" width="40" />
+
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " id="pills-info-tab" data-toggle="pill" href="#pills-info" role="tab" aria-controls="pills-info" aria-selected="false">
+                        <img id="info_black" src="images/info_black.png" width="40" />
+                        <img id="info_white" src="images/infoActive.png" width="40" />
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+    </div>
+    <script>
+        localStorage.getItem("textvalue");
+         document.getElementById("kidNameHeader").innerHTML = localStorage.getItem("kidNameValue");
+         var KidAge = localStorage.getItem("kidAgeValue");
+     
+         console.log(KidAge);
+            if (KidAge <= 1) {
+                document.getElementById("kidAgeHeader").innerHTML = ", חודש";
+            }
+            else {
+              document.getElementById("kidAgeHeader").innerHTML = ", " + KidAge + " חודשים";
+
+            }
+    </script>
+</body>
+</html>
