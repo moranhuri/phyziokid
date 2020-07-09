@@ -1,0 +1,19 @@
+﻿body {
+}
+
+#pills-video-tab.active {
+
+    #video_white {
+        visibility: visible
+    }
+
+    #video_black {
+        visibility: hidden
+    }
+}
+
+#pills-video-tab {
+    #video_white {
+        visibility: hidden
+    }
+}
